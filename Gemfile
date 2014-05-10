@@ -1,6 +1,7 @@
+source 'https://rubygems.org'
+
 ruby '2.1.0'
 
-source 'https://rubygems.org'
 gem 'gosu'
 gem 'pry'
-
+gem 'guard-rspec', require: false
