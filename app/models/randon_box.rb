@@ -5,22 +5,21 @@ class RandonBox < Box
 
   def initialize(*args)
     args.any? ? super(args.first) : super
-    generate_randon_image
-  end
-
-  def generate_randon_image
-    randon_range = total_colors - 1
-    @image = []
-    @width.times do |w|
-      @image << []
-      @height.times do |h|
-        @image[w] << colors[rand(randon_range)]
-      end
-    end
-    @image
+    @image = generate_randon_image
   end
 
   private
+
+  def generate_randon_image
+    randon_range = total_colors - 1
+
+    (1..@width).map do
+      (1..@height).map do
+        colors[rand(randon_range)]
+      end
+    end
+  end
+
   def colors
     @colors ||= Gosu::Color.constants.pop(total_colors)
     @colors
