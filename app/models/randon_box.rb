@@ -8,6 +8,18 @@ class RandonBox < Box
     @image = generate_randon_image
   end
 
+  def tile line_index, col_index
+    line_position = line_index * @zoom
+    col_position = col_index * @zoom
+
+    {
+      A: { x: @x + col_position           , y: @y + line_position           },
+      B: { x: @x + col_position + @zoom   , y: @y + line_position           },
+      C: { x: @x + col_position           , y: @y + line_position + @zoom   },
+      D: { x: @x + col_position + @zoom   , y: @y + line_position + @zoom   },
+    }
+  end
+
   private
 
   def generate_randon_image
