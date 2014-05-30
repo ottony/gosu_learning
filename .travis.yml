@@ -1,7 +1,11 @@
 language: ruby
-cache: bundler
-script: bundle exec rspec
-rvm: 2.1.0
 gemfile: Gemfile
+rvm: 2.1.0
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev
+install:
+  - bundle install
+script: bundle exec rspec
 notifications:
   email: ottony93@gmail.com
