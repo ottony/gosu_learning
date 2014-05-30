@@ -1,7 +1,0 @@
-# Logfile created on 2014-05-08 18:54:00 -0300 by logger.rb/41954
-I, [2014-05-08T18:54:00.674897 #3518]  INFO -- : 0:  coderay (1.1.0) from /home/ottony/.rvm/gems/ruby-2.0.0-p353/specifications/coderay-1.1.0.gemspec
-I, [2014-05-08T18:54:00.675331 #3518]  INFO -- : 0:  gosu (0.7.50) from /home/ottony/.rvm/gems/ruby-2.0.0-p353/specifications/gosu-0.7.50.gemspec
-I, [2014-05-08T18:54:00.675667 #3518]  INFO -- : 0:  method_source (0.8.2) from /home/ottony/.rvm/gems/ruby-2.0.0-p353/specifications/method_source-0.8.2.gemspec
-I, [2014-05-08T18:54:02.547053 #3518]  INFO -- : 0:  slop (3.5.0) from /home/ottony/.rvm/gems/ruby-2.0.0-p353/specifications/slop-3.5.0.gemspec
-I, [2014-05-08T18:54:02.548319 #3518]  INFO -- : 0:  pry (0.9.12.6) from /home/ottony/.rvm/gems/ruby-2.0.0-p353/specifications/pry-0.9.12.6.gemspec
-I, [2014-05-08T18:54:02.549151 #3518]  INFO -- : 0:  bundler (1.5.1) from /home/ottony/.rvm/gems/ruby-2.0.0-p353/specifications/bundler-1.5.1.gemspec

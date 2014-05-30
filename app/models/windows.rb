@@ -30,9 +30,9 @@ class Windows < Gosu::Window
   end
 
   private def draw_messages
-    @msg.draw("X: #{@randon_box.__x__}", 10,640,0,1,1,Gosu::Color::BLUE)
-    @msg.draw("Y: #{@randon_box.__y__}", 10,660,0,1,1,Gosu::Color::BLUE)
+    @msg.draw("X: #{@randon_box.x}", 10,640,0,1,1,Gosu::Color::BLUE)
+    @msg.draw("Y: #{@randon_box.y}", 10,660,0,1,1,Gosu::Color::BLUE)
     @msg.draw("FPS: #{fps}", 780,680,0,1,1,Gosu::Color::BLUE)
-    @msg.draw("Seconds: #{(@time / 1000)}", 10,680,0,1,1,Gosu::Color::BLUE)
+    @msg.draw("Seconds: #{ milliseconds / 1000 }", 10,680,0,1,1,Gosu::Color::BLUE)
   end
 end

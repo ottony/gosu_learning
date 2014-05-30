@@ -1,5 +1,7 @@
 /tmp
 /.rspec
+*.log
+.bundle
 
 coverage/*
 !coverage/.gitkee
