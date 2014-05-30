@@ -17,12 +17,12 @@ class Box
   def draw window
   end
 
-  def __x__ max_width
-    @x - center(@width) + center(max_width)
+  def __x__ max_width = 900
+    @x - center(@width*@zoom) + center(max_width)
   end
 
-  def __y__ max_heigth
-    @y - center(@height) + center(max_heigth)
+  def __y__ max_heigth = 700
+    @y - center(@height*@zoom) + center(max_heigth)
   end
 
   private def center length
