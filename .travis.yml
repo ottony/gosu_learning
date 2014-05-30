@@ -1,0 +1,7 @@
+language: ruby
+cache: bundler
+script: bundle exec rspec
+rvm: 2.1.0
+gemfile: Gemfile
+notifications:
+  email: ottony93@gmail.com

@@ -4,4 +4,8 @@ ruby '2.1.0'
 
 gem 'gosu'
 gem 'pry'
-gem 'guard-rspec', require: false
+
+group :test do
+  gem 'guard-rspec', require: false
+  gem 'coveralls', require: false
+end
