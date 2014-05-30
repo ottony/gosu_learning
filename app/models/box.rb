@@ -11,7 +11,7 @@ class Box
     @y = y
   end
 
-  def update time
+  def update
   end
 
   def draw

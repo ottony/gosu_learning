@@ -17,8 +17,9 @@ class Windows < Gosu::Window
   end
 
   def update
+    @randon_box.update
+
     @time += update_interval
-    @randon_box.update @time
     if ((@time - update_interval).ceil % 1000) == 0
       @fps = @count
       @count = 0

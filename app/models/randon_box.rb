@@ -8,6 +8,13 @@ class RandonBox < Box
     @image = generate_randon_image
   end
 
+  def update
+    time = @window.time / 100
+
+    @x = center(@window.width) * (Math.sin(time / 10 * Math::PI))
+    @y = center(@window.height) * (Math.cos(time / 10 * Math::PI))
+  end
+
   def draw
     @image.each_with_index do |line, line_index|
       line.each_with_index do |col, col_index|
