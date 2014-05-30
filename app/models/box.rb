@@ -1,12 +1,12 @@
 class Box
   attr_reader :height, :width
-  attr_reader :x, :y
   attr_accessor :zoom
 
-  def initialize height: 64, width: 64, zoom: 1, x: 0, y: 0
+  def initialize window: , height: 64, width: 64, zoom: 1, x: 0, y: 0
     @height = height
     @width = width
     @zoom = zoom
+    @window = window
     @x = x
     @y = y
   end
@@ -14,15 +14,23 @@ class Box
   def update time
   end
 
-  def draw window
+  def draw
   end
 
-  def __x__ max_width = 900
-    @x - center(@width*@zoom) + center(max_width)
+  def __x__
+    @x - center(@width*@zoom) + center(@window.width)
   end
 
-  def __y__ max_heigth = 700
-    @y - center(@height*@zoom) + center(max_heigth)
+  def __y__
+    @y - center(@height*@zoom) + center(@window.height)
+  end
+
+  def x
+    @x
+  end
+
+  def y
+    @y
   end
 
   private def center length

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe RandonBox do
 
   context 'generate randon image' do
-    let(:randon_box) { RandonBox.new(width: 64, height: 64) }
+    let(:randon_box) { RandonBox.new(window: Support.window, width: 64, height: 64) }
     let(:colors) { [:NONE, :BLACK, :GRAY, :WHITE, :AQUA, :RED, :GREEN, :BLUE, :YELLOW, :FUCHSIA, :CYAN] }
 
     it 'with right width' do
@@ -23,7 +23,12 @@ describe RandonBox do
   context 'mount tile to draw' do
     let(:line_index) { 1 }
     let(:col_index) { 1 }
-    let(:randon_box) { RandonBox.new(height: 64, width: 64, x: 1 , y: 1, zoom: 1) }
+    let(:randon_box) { RandonBox.new(window: Support.window, height: 64, width: 64, x: 1 , y: 1, zoom: 1) }
+
+    before(:each) do 
+      randon_box.stub(:__x__) { randon_box.x }
+      randon_box.stub(:__y__) { randon_box.y }
+    end
 
     it 'without zoom' do
       tile = randon_box.tile(line_index, col_index)

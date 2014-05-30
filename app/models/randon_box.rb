@@ -8,12 +8,12 @@ class RandonBox < Box
     @image = generate_randon_image
   end
 
-  def draw window
+  def draw
     @image.each_with_index do |line, line_index|
       line.each_with_index do |col, col_index|
         tile = tile(line_index, col_index)
 
-        window.draw_quad(tile[:A][:x], tile[:A][:y], Gosu::Color.const_get(col),
+        @window.draw_quad(tile[:A][:x], tile[:A][:y], Gosu::Color.const_get(col),
                          tile[:B][:x], tile[:B][:y], Gosu::Color.const_get(col),
                          tile[:C][:x], tile[:C][:y], Gosu::Color.const_get(col),
                          tile[:D][:x], tile[:D][:y], Gosu::Color.const_get(col))
@@ -27,10 +27,10 @@ class RandonBox < Box
     col_position = col_index * @zoom
 
     {
-      A: { x: @x + col_position           , y: @y + line_position           },
-      B: { x: @x + col_position + @zoom   , y: @y + line_position           },
-      C: { x: @x + col_position           , y: @y + line_position + @zoom   },
-      D: { x: @x + col_position + @zoom   , y: @y + line_position + @zoom   },
+      A: { x: __x__ + col_position           , y: __y__ + line_position           },
+      B: { x: __x__ + col_position + @zoom   , y: __y__ + line_position           },
+      C: { x: __x__ + col_position           , y: __y__ + line_position + @zoom   },
+      D: { x: __x__ + col_position + @zoom   , y: __y__ + line_position + @zoom   },
     }
   end
 
