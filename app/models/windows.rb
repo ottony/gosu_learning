@@ -11,7 +11,7 @@ class Windows < Gosu::Window
 
   private def load
     @msg = Gosu::Font.new(self, "Times New Roman", 20)
-    @randon_box = RandonBox.new window: self
+    @randon_box = RandonBox.new window: self, zoom: 3, width: 32
     @time = 0
   end
 
@@ -25,6 +25,10 @@ class Windows < Gosu::Window
   end
 
   def draw
+    draw_quad(0, 0, Color::GRAY,
+              900, 0, Color::RED,
+              0, 700, Color::YELLOW,
+              900, 700, Color::CYAN)
     @randon_box.draw
     draw_messages
   end
